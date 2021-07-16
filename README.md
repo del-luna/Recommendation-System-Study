@@ -7,9 +7,9 @@
 
 Dataset : [Movielens](https://grouplens.org/datasets/movielens/)
 
+## Paper List(implemented)
 
-
-
+- PMF is currently not running due to memory issues for large data (eg netflix prize).
 
 ## Reference
 
