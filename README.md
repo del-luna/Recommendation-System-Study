@@ -9,7 +9,10 @@ Dataset : [Movielens](https://grouplens.org/datasets/movielens/)
 
 ## Paper List(implemented)
 
+- [Collaborative Filtering for Implicit Feedback Datasets](http://yifanhu.net/PUB/cf.pdf)
+
 - PMF is currently not running due to memory issues for large data (eg netflix prize).
+- [BPR](https://arxiv.org/ftp/arxiv/papers/1205/1205.2618.pdf)
 
 ## Reference
 
