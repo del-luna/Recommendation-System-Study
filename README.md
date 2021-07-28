@@ -16,5 +16,4 @@ Dataset : [Movielens](https://grouplens.org/datasets/movielens/)
 
 ## Reference
 
-- [Github](Reference)
-- [towardsdatascience](https://towardsdatascience.com/introduction-to-two-approaches-of-content-based-recommendation-system-fc797460c18c)
+- [Github](https://github.com/yoongi0428/RecSys_PyTorch)

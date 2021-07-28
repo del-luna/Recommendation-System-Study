@@ -5,8 +5,6 @@ userid/movieid/ratings
 ...  / ... / ...  
 ... / ... / ...
 
--> pivot table shape
-
 '''
 
 
@@ -21,7 +19,9 @@ from pathlib import Path
 from utils import df_to_sparse
 
 class Dataset(object):
-    def __init__(self, data_path:str, generalization:str='weak', valid_ratio:Union[int, float]=0.1, test_ratio:Union[int, float]=0.2, seed:int=42):
+    def __init__(self, data_path:str, generalization:str='weak',
+                    valid_ratio:Union[int, float]=0.1, test_ratio:Union[int, float]=0.2,
+                    cache_dir:str='cache', seed:int=42):
 
         self.data_path = Path(data_path)
 
@@ -31,6 +31,8 @@ class Dataset(object):
         self.test_ratio = test_ratio
 
         self.seed= seed
+        self.cache_dir = cache_dir
+        self._prepro_cache_dir = None
 
     def _load_preprocessed_data(self) -> None:
         print('Load data...')
@@ -53,7 +55,8 @@ class Dataset(object):
             self.valid_target = df_to_sparse(valid_df, shape=(self.num_users, self.num_items))
             self.test_target = df_to_sparse(test_df, shape=(self.num_users, self.num_items))
 
-
+        else:
+            pass
 
 
 
